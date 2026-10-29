@@ -1,10 +1,11 @@
 import { HintRow } from "@/components/hint-row";
 import { BottomTabInset, MaxContentWidth, Spacing } from "@/constants/theme";
+import { useBlackout } from "@/hooks/use-blackout";
 import { useAudioPlayer } from "expo-audio";
 import * as Network from "expo-network";
 import { useEffect, useRef, useState } from "react";
 import { StyleSheet } from "react-native";
-import { Text, useTheme } from "react-native-paper";
+import { Button, Text, useTheme } from "react-native-paper";
 import { SafeAreaView } from "react-native-safe-area-context";
 import TcpSocket from "react-native-tcp-socket";
 
@@ -13,6 +14,7 @@ const PORT = 9333;
 export default function PlayerScreen() {
   const ip = usePlayerServer();
   const { colors } = useTheme();
+  const { setBlackedOut } = useBlackout();
 
   return (
     <SafeAreaView style={[styles.safeArea, { backgroundColor: colors.background }]}>
@@ -25,6 +27,14 @@ export default function PlayerScreen() {
       </Text>
 
       <HintRow title="Server IP Address" hint={ip} />
+      <Button
+        mode="contained"
+        onPress={() => {
+          setBlackedOut(true);
+        }}
+      >
+        Blackout
+      </Button>
     </SafeAreaView>
   );
 }
