@@ -23,11 +23,7 @@
         "android.permission.FOREGROUND_SERVICE",
         "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK"
       ],
-      "package": "com.anonymous.phoneringer"
-    },
-    "web": {
-      "output": "server",
-      "favicon": "./assets/images/favicon.png"
+      "package": "com.vandad1901.phoneringer"
     },
     "plugins": [
       "expo-router",
