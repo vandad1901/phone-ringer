@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "phone-ringer",
+    "name": "Phone Ringer",
     "slug": "phone-ringer",
-    "version": "1.0.0",
+    "version": "0.2.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "phoneringer",
@@ -25,10 +25,7 @@
       ],
       "package": "com.vandad1901.phoneringer"
     },
-    "plugins": [
-      "expo-router",
-      "expo-audio"
-    ],
+    "plugins": ["expo-router", "expo-audio"],
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
