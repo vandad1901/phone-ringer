@@ -46,7 +46,6 @@ export function BlackoutProvider({ children }: PropsWithChildren) {
           }}
         />
       )}
-      <StatusBar hidden={blackedOut} />
     </BlackoutContext.Provider>
   );
 }
